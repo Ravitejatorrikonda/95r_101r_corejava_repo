@@ -1,0 +1,17 @@
+package com.abstraction2;
+
+public class Bike extends Vehicle {
+	boolean hasSidecar;
+
+	public Bike(String modelName, String vehicleNumber, String company, boolean hasSidecar) {
+		super(modelName, vehicleNumber, company);
+		this.hasSidecar = hasSidecar;
+	}
+	
+	public void startEngine() {
+		System.out.println("Starting engine with kick-start.");
+	}
+	
+	
+
+}
