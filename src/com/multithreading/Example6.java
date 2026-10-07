@@ -6,6 +6,7 @@ class G{
 	
   synchronized void increment() {
 		count++;
+		System.out.println(Thread.currentThread().getName());
 	}
 	
 	int getCount() {
@@ -24,7 +25,6 @@ public class Example6 {
 		Thread th1=new Thread(()->{
 			for (int i = 1; i <= 1000; i++) {
 				g.increment();
-				System.out.println(Thread.currentThread().getName());
 			}
 		});
 		
@@ -32,7 +32,7 @@ public class Example6 {
 		Thread th2=new Thread(()->{
 			for (int i = 1; i <= 1000; i++) {
 				g.increment();
-				System.out.println(Thread.currentThread().getName());
+//				System.out.println(Thread.currentThread().getName());
 			}
 		});
 		
